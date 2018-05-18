@@ -1,0 +1,26 @@
+def longestWord(inpLst):
+    '''
+    Fuction takes a list of words and returns the list contatining the words with maximum length.
+    '''    
+    wordlst=[]
+    length=-1
+    for i in inpLst:
+        if len(i)>length:
+            wordlst.clear()
+            wordlst.append(i)
+            length=len(i)
+        elif len(i)==length:
+            wordlst.append(i)
+            length=len(i)
+        else:
+            continue
+        
+    return wordlst        
+
+# Testing the fuction with sample list
+lstx=['APPLE','BALL','CAT','DOG','MANGO']
+longestWord(lstx)
+
+# Testing the fuction with sample list
+lsty=['APPLE','MANGO','RAT','ELEPHANT']
+longestWord(lsty)
